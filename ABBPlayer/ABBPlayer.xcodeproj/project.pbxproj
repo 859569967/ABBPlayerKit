@@ -68,6 +68,11 @@
 		F5A637D81D913BC600F23028 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A637D71D913BC600F23028 /* libsqlite3.tbd */; };
 		F5A637DB1D91410A00F23028 /* DownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637DA1D91410A00F23028 /* DownloadModel.m */; };
 		F5A637DD1D915FDA00F23028 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A637DC1D915FDA00F23028 /* Foundation.framework */; };
+		F5A637E01D92243700F23028 /* MessageBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637DF1D92243700F23028 /* MessageBaseViewController.m */; };
+		F5A637E21D9225C000F23028 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A637E11D9225C000F23028 /* libc++.tbd */; };
+		F5A637E41D9225C900F23028 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A637E31D9225C900F23028 /* libz.tbd */; };
+		F5A637E61D9227C800F23028 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A637E51D9227C800F23028 /* AVFoundation.framework */; };
+		F5A637E81D92291A00F23028 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A637E71D92291A00F23028 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +215,12 @@
 		F5A637D91D91410A00F23028 /* DownloadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadModel.h; sourceTree = "<group>"; };
 		F5A637DA1D91410A00F23028 /* DownloadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadModel.m; sourceTree = "<group>"; };
 		F5A637DC1D915FDA00F23028 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F5A637DE1D92243700F23028 /* MessageBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageBaseViewController.h; sourceTree = "<group>"; };
+		F5A637DF1D92243700F23028 /* MessageBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageBaseViewController.m; sourceTree = "<group>"; };
+		F5A637E11D9225C000F23028 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		F5A637E31D9225C900F23028 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F5A637E51D9227C800F23028 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F5A637E71D92291A00F23028 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		F70739D382F3089AFB5B725F /* Pods-ABBPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABBPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ABBPlayer/Pods-ABBPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,6 +229,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A637E81D92291A00F23028 /* MediaPlayer.framework in Frameworks */,
+				F5A637E61D9227C800F23028 /* AVFoundation.framework in Frameworks */,
+				F5A637E41D9225C900F23028 /* libz.tbd in Frameworks */,
+				F5A637E21D9225C000F23028 /* libc++.tbd in Frameworks */,
 				F5A637DD1D915FDA00F23028 /* Foundation.framework in Frameworks */,
 				F5A637D81D913BC600F23028 /* libsqlite3.tbd in Frameworks */,
 				5076AABDC2EE2EFC64A76DE0 /* libPods-ABBPlayer.a in Frameworks */,
@@ -253,6 +268,10 @@
 		EC4C6481146FA2F824A3742D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F5A637E71D92291A00F23028 /* MediaPlayer.framework */,
+				F5A637E51D9227C800F23028 /* AVFoundation.framework */,
+				F5A637E31D9225C900F23028 /* libz.tbd */,
+				F5A637E11D9225C000F23028 /* libc++.tbd */,
 				F5A637DC1D915FDA00F23028 /* Foundation.framework */,
 				F5A637D71D913BC600F23028 /* libsqlite3.tbd */,
 				52E74282A60EDA5831D645F0 /* libPods-ABBPlayer.a */,
@@ -718,6 +737,8 @@
 			children = (
 				F5A637D41D91389500F23028 /* MoviePlayerViewController.h */,
 				F5A637D51D91389500F23028 /* MoviePlayerViewController.m */,
+				F5A637DE1D92243700F23028 /* MessageBaseViewController.h */,
+				F5A637DF1D92243700F23028 /* MessageBaseViewController.m */,
 			);
 			path = MoviePlayerVC;
 			sourceTree = "<group>";
@@ -935,6 +956,7 @@
 				F5A637D01D9137B300F23028 /* UIView+WHC_Loading.m in Sources */,
 				F540E4AC1D9126D100D26CBF /* AppDelegate.m in Sources */,
 				F540E4A91D9126D100D26CBF /* main.m in Sources */,
+				F5A637E01D92243700F23028 /* MessageBaseViewController.m in Sources */,
 				F5A6379A1D9136BD00F23028 /* SVIndefiniteAnimatedView.m in Sources */,
 				F5A637C11D9136C400F23028 /* DownLoadListCell.m in Sources */,
 				F5A637AA1D9136BD00F23028 /* CoreModelConst.m in Sources */,

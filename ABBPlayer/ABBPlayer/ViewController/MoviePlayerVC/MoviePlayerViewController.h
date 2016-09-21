@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MoviePlayerViewController : UIViewController
+#import "MessageBaseViewController.h"
+@interface MoviePlayerViewController : MessageBaseViewController
 /** 视频URL */
 @property (nonatomic, strong) NSURL *videoURL;
 @end

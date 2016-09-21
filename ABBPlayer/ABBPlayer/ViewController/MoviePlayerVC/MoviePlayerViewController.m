@@ -11,8 +11,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <Masonry/Masonry.h>
 #import "ZFPlayer.h"
-#define Screen_height  [[UIScreen mainScreen] bounds].size.height
-#define Screen_width  [[UIScreen mainScreen] bounds].size.width
+#import "DownloadModel.h"
 
 @interface MoviePlayerViewController ()
 @property (weak, nonatomic) IBOutlet ZFPlayerView *playerView;
@@ -29,10 +28,23 @@
     [self.playerView cancelAutoFadeOutControlBar];
 }
 
+//#pragma mark - 代码初始化ZFPlayerView
 //- (ZFPlayerView *)playerView {
 //    if (!_playerView) {
 //        _playerView = [[ZFPlayerView alloc]initWithFrame:CGRectMake(0, 0, Screen_width, Screen_height*0.4)];
 //        [self.view addSubview:_playerView];
+//        [_playerView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(self.view).offset(20);
+//            make.left.right.equalTo(self.view);
+//            // Note here, the aspect ratio 16:9 priority is lower than 1000 on the line, because the 4S iPhone aspect ratio is not 16:9
+//            make.height.equalTo(self.playerView.mas_width).multipliedBy(9.0f/16.0f).with.priority(750);
+//        }];
+//        _playerView.videoURL = self.videoURL;
+//        // Back button event
+//        __weak typeof(self) weakSelf = self;
+//        _playerView.goBackBlock = ^{
+//            [weakSelf.navigationController popViewControllerAnimated:YES];
+//        };
 //    }
 //    return _playerView;
 //}
@@ -67,6 +79,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    __weak typeof(self) weakSelf       = self;
     
     //if use Masonry,Please open this annotation
     /*
@@ -93,7 +106,7 @@
     // 设置视频的URL
     self.playerView.videoURL = self.videoURL;
     // 设置标题
-    self.playerView.title = @"可以设置视频的标题";
+    self.playerView.title = self.title;
     //（可选设置）可以设置视频的填充模式，内部设置默认（ZFPlayerLayerGravityResizeAspect：等比例填充，直到一个维度到达区域边界）
     self.playerView.playerLayerGravity = ZFPlayerLayerGravityResizeAspect;
     
@@ -102,10 +115,14 @@
     // 下载按钮的回调
     self.playerView.downloadBlock = ^(NSString *urlStr) {
         // 此处是截取的下载地址，可以自己根据服务器的视频名称来赋值
-//        NSString *name = [urlStr lastPathComponent];
-//        [[ZFDownloadManager sharedDownloadManager] downFileUrl:urlStr filename:name fileimage:nil];
-//        // 设置最多同时下载个数（默认是3）
-//        [ZFDownloadManager sharedDownloadManager].maxCount = 1;
+        NSString *name = [urlStr lastPathComponent];
+        //开始后台下载
+        DownloadModel *downloadModel = [[DownloadModel alloc]init];
+        downloadModel.showModelMssage= ^(NSString *message){
+            //显示信息
+            [weakSelf.view toast:message];
+        };
+        [downloadModel downLoadWith:urlStr title:name defaultFormat:@".mp4"];
     };
     
     // 如果想从xx秒开始播放视频
@@ -113,7 +130,6 @@
     
     // 是否自动播放，默认不自动播放
     [self.playerView autoPlayTheVideo];
-    __weak typeof(self) weakSelf = self;
     self.playerView.goBackBlock = ^{
         [weakSelf.navigationController popViewControllerAnimated:YES];
     };

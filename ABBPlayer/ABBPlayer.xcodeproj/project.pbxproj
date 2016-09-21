@@ -221,6 +221,7 @@
 		F5A637E31D9225C900F23028 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F5A637E51D9227C800F23028 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F5A637E71D92291A00F23028 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		F5A637E91D92410800F23028 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F70739D382F3089AFB5B725F /* Pods-ABBPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABBPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ABBPlayer/Pods-ABBPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -304,6 +305,7 @@
 		F540E4A61D9126D100D26CBF /* ABBPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				F5A637E91D92410800F23028 /* PrefixHeader.pch */,
 				F540E4DA1D91298F00D26CBF /* ThirdPart */,
 				F540E4DB1D91298F00D26CBF /* ViewController */,
 				F540E4A71D9126D100D26CBF /* Supporting Files */,
@@ -1127,6 +1129,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = ABBPlayer/PrefixHeader.pch;
 				INFOPLIST_FILE = ABBPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1141,6 +1144,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = ABBPlayer/PrefixHeader.pch;
 				INFOPLIST_FILE = ABBPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

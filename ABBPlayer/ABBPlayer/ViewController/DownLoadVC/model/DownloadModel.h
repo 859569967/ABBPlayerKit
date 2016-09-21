@@ -10,16 +10,15 @@
 #import "WHC_DownloadObject.h"
 #import <WHCNetWorkKit/WHC_HttpManager.h>
 
-@protocol DownloadModelDeleget <NSObject>
+#define WHC_BackgroundDownload (1)
 
-- (void)showMsg:(NSString *)message;
-
-@end
+// showMsg
+typedef void(^DownloadModelShowMsg)(NSString *message);
 
 @interface DownloadModel : NSObject
 
-@property (nonatomic, strong) id <DownloadModelDeleget> deleget;
+/** showMsg */
+@property (nonatomic, copy  ) DownloadModelShowMsg showModelMssage;
 
-
-- (void)downLoadWith:(NSString *)playUrl title:(NSString *)title;
+- (void)downLoadWith:(NSString *)playUrl title:(NSString *)title defaultFormat:(NSString *)defaultFormat;
 @end

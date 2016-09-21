@@ -12,12 +12,12 @@
 #import "ZFPlyerResolution.h"
 #import <Masonry/Masonry.h>
 
-#import "UIView+WHC_Toast.h"
+
 #import "MoviePlayerViewController.h"
 #import "DownLoadListViewController.h"
 #import "DownloadModel.h"
 
-@interface VideoListViewController ()<DownloadModelDeleget>
+@interface VideoListViewController ()
 @property (nonatomic, strong) NSMutableArray *dataSource;
 @property (nonatomic, strong) ZFPlayerView   *playerView;
 @end
@@ -120,7 +120,7 @@
                              AtIndexPath:weakIndexPath
                         withImageViewTag:101];
         [weakSelf.playerView addPlayerToCellImageView:weakCell.picView];
-        weakSelf.playerView.title = @"可以设置视频的标题";
+        weakSelf.playerView.title = model.title;
         
         // 下载功能
         weakSelf.playerView.hasDownload   = YES;
@@ -129,8 +129,11 @@
             NSString *name = [urlStr lastPathComponent];
             //开始后台下载
             DownloadModel *downloadModel = [[DownloadModel alloc]init];
-            downloadModel.deleget = self;
-            [downloadModel downLoadWith:urlStr title:name];
+            downloadModel.showModelMssage= ^(NSString *message){
+                //显示信息
+                [weakSelf.view toast:message];
+            };
+            [downloadModel downLoadWith:urlStr title:name defaultFormat:@".mp4"];
         };
         
         // 赋值分辨率字典
@@ -172,9 +175,5 @@
     
 }
 
-#pragma mark - 显示信息 DownloadModelDeleget
-- (void)showMsg:(NSString *)message {
-    [self.view toast:message];
-}
 
 @end

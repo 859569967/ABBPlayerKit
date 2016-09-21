@@ -276,7 +276,13 @@
             }
             [self saveDownloadState:operation];
         }else {
-            [[[UIAlertView alloc] initWithTitle:@"下载失败" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+            NSString *msg = @"";
+            if (_downloadObject.downloadState == WHCDownloadCanceled) {
+                msg = @"暂停下载";
+            } else {
+                msg = @"下载失败";
+            }
+            [[[UIAlertView alloc] initWithTitle:msg message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
         }
         if (tempDownloadObject != nil) {
             if (_delegate && [_delegate respondsToSelector:@selector(updateDownloadValue:index:)]) {

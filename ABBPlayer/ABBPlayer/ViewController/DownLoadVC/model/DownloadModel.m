@@ -10,17 +10,25 @@
 
 @implementation DownloadModel
 
-- (void)downLoadWith:(NSString *)playUrl title:(NSString *)title {
+//defaultFormat 缺省下载格式：下载地址没有视频格式时设置
+- (void)downLoadWith:(NSString *)playUrl title:(NSString *)title defaultFormat:(NSString *)defaultFormat {
     
     NSString * suffix = [[WHC_HttpManager shared] fileFormatWithUrl:playUrl];
-    NSString * fileName = [NSString stringWithFormat:@"%@%@",
-                           title,
-                           suffix != nil ? suffix : @".mp4"];
+     NSString * titleSuffix = [[WHC_HttpManager shared] fileFormatWithUrl:title];
+    NSString * fileName = @"";
+    if (titleSuffix) {
+        fileName = title;
+        
+    } else {
+        fileName = [NSString stringWithFormat:@"%@%@",
+                    title,
+                    suffix != nil ? suffix : defaultFormat];//@".mp4"
+    }
     
 #if WHC_BackgroundDownload
 [[WHC_SessionDownloadManager shared] setBundleIdentifier:@"com.WHC.WHCNetWorkKit.backgroundsession"];
 WHC_DownloadSessionTask * downloadTask = [[WHC_SessionDownloadManager shared]
-      download:playermodel.playUrl
+      download:playUrl
       savePath:[WHC_DownloadObject videoDirectory]
       saveFileName:fileName
       response:^(WHC_BaseOperation *operation, NSError *error, BOOL isOK) {
@@ -45,7 +53,7 @@ WHC_DownloadSessionTask * downloadTask = [[WHC_SessionDownloadManager shared]
           if (isSuccess) {
               [self toast:@"下载成功"];
               
-              [weakSelf saveDownloadStateOperation:(WHC_DownloadOperation *)operation];
+              [self saveDownloadStateOperation:(WHC_DownloadOperation *)operation];
               
               WHC_DownloadOperation * downloadOperation = (WHC_DownloadOperation*)operation;
               WHC_DownloadObject * downloadObject = [WHC_DownloadObject readDiskCache:downloadOperation.saveFileName];
@@ -57,10 +65,10 @@ WHC_DownloadSessionTask * downloadTask = [[WHC_SessionDownloadManager shared]
               [downloadObject writeDiskCache];
               
           }else {
-              [weakSelf.view toast:error.userInfo[NSLocalizedDescriptionKey]];
+              [self toast:error.userInfo[NSLocalizedDescriptionKey]];
               if (error != nil &&
                   error.code == WHCCancelDownloadError) {
-                  [weakSelf saveDownloadStateOperation:(WHC_DownloadOperation *)operation];
+                  [self saveDownloadStateOperation:(WHC_DownloadOperation *)operation];
               }
           }
       }];
@@ -168,10 +176,9 @@ downloadTask = [[WHC_HttpManager shared] download:playUrl
 }
 
 - (void)toast:(NSString *)msg {
-    if ([self.deleget respondsToSelector:@selector(showMsg:)]) {
-        [self.deleget showMsg:@"下载失败"];
+    if (self.showModelMssage) {
+        self.showModelMssage(msg);
     }
-    
 }
 
 @end

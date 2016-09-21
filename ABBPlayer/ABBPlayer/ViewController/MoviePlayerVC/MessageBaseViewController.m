@@ -8,7 +8,7 @@
 
 #import "MessageBaseViewController.h"
 #import "DownloadModel.h"
-@interface MessageBaseViewController ()<DownloadModelDeleget>
+@interface MessageBaseViewController ()
 
 @end
 
@@ -17,11 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
-
-#pragma mark - 显示信息 DownloadModelDeleget
-- (void)showMsg:(NSString *)message {
-    [self.view toast:message];
 }
 
 @end

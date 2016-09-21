@@ -1,6 +1,8 @@
 # ABBPlayerKit
 playing and downloading
 
+        实现功能 ：播放视频 ，后台下载 （真机调试功能正常）1、使用ZFPlayer播放视频（可以在线和本地播放，基于AVPlayer，播放格式：支持XVID/DIVX编码AVI,WMV,RMVB,ASF,H264,MKV等格式，同时支持SMI, SRT字幕）2、使用WHCNetWorkKit 实现下载，后台下载Function: Play video, background downloading (device debugging function is normal) 1, using ZFPlayer play video (online and local playback) 2 Use WHCNetWorkKit Implementation, background downloading
+
 # 实现功能 ：播放视频  后台下载
 
 ## 1、使用 [ZFPlayer](https://github.com/renzifeng/ZFPlayer) 播放视频（可以在线和本地播放）

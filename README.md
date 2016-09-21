@@ -1,7 +1,12 @@
 # ABBPlayerKit
 playing and downloading
 
-        实现功能 ：播放视频 ，后台下载 （真机调试功能正常）1、使用ZFPlayer播放视频（可以在线和本地播放，基于AVPlayer，播放格式：支持XVID/DIVX编码AVI,WMV,RMVB,ASF,H264,MKV等格式，同时支持SMI, SRT字幕）2、使用WHCNetWorkKit 实现下载，后台下载Function: Play video, background downloading (device debugging function is normal) 1, using ZFPlayer play video (online and local playback) 2 Use WHCNetWorkKit Implementation, background downloading
+         实现功能 ：播放视频 ，后台下载 （真机调试功能正常）1、使用ZFPlayer播放视频
+        （可以在线和本地播放，基于AVPlayer，播放格式：支持XVID/DIVX编码AVI,WMV,RMVB,ASF,H264,MKV等格式，同时支持SMI, SRT字幕）
+        2、使用WHCNetWorkKit 实现下载，后台下载（一直保持下载）
+        Function: Play video, background downloading (device debugging function is normal)
+        1, using ZFPlayer play video (online and local playback) 
+        2 Use WHCNetWorkKit Implementation, background downloading
 
 # 实现功能 ：播放视频  后台下载
 
@@ -35,7 +40,8 @@ playing and downloading
 ### 功能代码 （下载demo）
 
 ### 注意事项：
-        播放音视频的demo设置全局断点All Exceptions 会导致（Xcode异常：0 __cxa_throw） libc++abi.dylib`__cxa_throw:0x10df1bc6b <+0>: pushq %rbp，........（但是不是崩溃，不连接xcode运行不会崩溃，连接xcode运行时就会停顿在这里），是因为添加了全局断点：All Exceptions，但是没有设置oc！
+        播放音视频的demo设置全局断点All Exceptions 会导致（Xcode异常：0 __cxa_throw） libc++abi.dylib`__cxa_throw:0x10df1bc6b <+0>: pushq %rbp，........
+        （但是不是崩溃，不连接xcode运行不会崩溃，连接xcode运行时就会停顿在这里），是因为添加了全局断点：All Exceptions，但是没有设置oc！
 
 ![Exceptions](images/stifF.png)
 

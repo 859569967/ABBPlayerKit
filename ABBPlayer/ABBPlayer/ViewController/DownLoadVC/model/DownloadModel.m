@@ -22,7 +22,8 @@
     } else {
         fileName = [NSString stringWithFormat:@"%@%@",
                     title,
-                    suffix != nil ? suffix : defaultFormat];//@".mp4"
+                    suffix != nil ? suffix : defaultFormat];
+    
     }
     
 #if WHC_BackgroundDownload

@@ -46,6 +46,8 @@ playing and downloading
 ![Exceptions](images/stifF.png)
 
 
+        播放界面不能横屏适配时，查看项目是否禁止横屏，否则需要强制设置该控制器横屏
+
 ##运行效果
 
 [ZFPlayer播放展示图](https://github.com/renzifeng/ZFPlayer)

@@ -9,6 +9,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#import "AppDelegate.h"
 #import "WHCNetWorkKit.h"
 #import "UIView+WHC_Toast.h"
 

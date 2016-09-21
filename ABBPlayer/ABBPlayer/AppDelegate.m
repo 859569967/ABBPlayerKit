@@ -16,8 +16,53 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    ///开启网络状况的监听
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reachabilityChanged:)
+                                                 name:kReachabilityChangedNotification
+                                               object:nil];
+    
+    self.reach = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    [self.reach startNotifier]; //开始监听，会启动一个run loop
+    
     return YES;
+}
+
+//通知
+-(void)reachabilityChanged:(NSNotification*)note {
+    Reachability * reach = [note object];
+    NSParameterAssert([reach isKindOfClass: [Reachability class]]);
+    NetworkStatus status = [reach currentReachabilityStatus];
+    
+    //    //用于检测是否是WIFI
+    //    NSLog(@"%d",([[Reachability reachabilityForLocalWiFi] currentReachabilityStatus] != NotReachable));
+    //    //用于检查是否是3G
+    //    NSLog(@"%d",([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] != NotReachable));
+    
+    if (status == NotReachable) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"网络已断开" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alertView show];
+        NSLog(@"Notification Says 网络已断开 Unreachable");
+    }else if(status == ReachableViaWWAN){
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"移动网络" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alertView show];
+        NSLog(@"Notification Says 移动网络 mobilenet");
+        
+    }else if(status == ReachableViaWiFi){
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"WIfi网络" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alertView show];
+        NSLog(@"Notification Says WIfi网络 wifinet");
+    }
+    
+}
+
+- (void)dealloc {
+    // 删除通知对象
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

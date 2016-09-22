@@ -40,13 +40,17 @@ playing and downloading
 ### 功能代码 （下载demo）
 
 ### 注意事项：
-        播放音视频的demo设置全局断点All Exceptions 会导致（Xcode异常：0 __cxa_throw） libc++abi.dylib`__cxa_throw:0x10df1bc6b <+0>: pushq %rbp，........
+        1、播放音视频的demo设置全局断点All Exceptions 会导致（Xcode异常：0 __cxa_throw） libc++abi.dylib`__cxa_throw:0x10df1bc6b <+0>: pushq %rbp，........
         （但是不是崩溃，不连接xcode运行不会崩溃，连接xcode运行时就会停顿在这里），是因为添加了全局断点：All Exceptions，但是没有设置oc！
 
 ![Exceptions](images/stifF.png)
 
 
-        播放界面不能横屏适配时，查看项目是否禁止横屏，否则需要强制设置该控制器横屏
+        2、播放界面不能横屏适配时，查看项目是否禁止横屏，否则需要强制设置该控制器横屏
+
+        3、重新运行导致崩溃：
+![LaunchServicesError](images/LaunchServicesError.png)
+        Clean然后在Build下重新运行。（资源文件加载方式变化导致编译的缓存数据中含有残留的无效数据。清空了错误数据重新编译）
 
 ##运行效果
 

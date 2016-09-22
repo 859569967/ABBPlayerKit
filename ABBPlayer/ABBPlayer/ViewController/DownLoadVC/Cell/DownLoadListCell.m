@@ -17,6 +17,7 @@
 @property (nonatomic , strong)IBOutlet UILabel  *speedLabel;
 @property (nonatomic , strong)IBOutlet UIProgressView *progressBar;
 @property (nonatomic , strong)IBOutlet UIButton *downloadButton;
+@property (nonatomic , strong)IBOutlet UILabel  *percentageLabel;
 
 @property (nonatomic , strong)UIButton *downloadArrowButton;
 @property (nonatomic , strong)WHC_DownloadObject *downloadObject;
@@ -37,8 +38,6 @@
 
 #pragma mark - 通知方法:
 -(void)reachabilityChanged:(NSNotification *)notification{
-    
-    
     
     NetworkStatus status = (NetworkStatus)notification.object;
     if (status == NotReachable) {
@@ -96,10 +95,19 @@
     }
 }
 
+- (NSString *)percentageLabelText {
+    if (_downloadObject.totalLenght > 0) {
+        return [NSString stringWithFormat:@"%.2llu%%",_downloadObject.currentDownloadLenght / _downloadObject.totalLenght];
+    }
+    return @"0%";
+}
+
 - (void)updateDownloadValue {
     _titleLabel.text = _downloadObject.fileName;
     _progressBar.progress = _downloadObject.downloadProcessValue;
     _downloadValueLabel.text = _downloadObject.downloadProcessText;
+    self.percentageLabel.text = [self percentageLabelText];
+    
     NSString * strSpeed = _downloadObject.downloadSpeed;
     if (_downloadObject.downloadState != WHCDownloading) {
         [self removeDownloadAnimtion];

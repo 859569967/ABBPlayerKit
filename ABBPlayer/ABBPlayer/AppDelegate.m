@@ -41,23 +41,33 @@
     //    NSLog(@"%d",([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] != NotReachable));
     
     if (status == NotReachable) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"网络已断开" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-        [alertView show];
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"网络已断开" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+//        [alertView show];
         NSLog(@"Notification Says 网络已断开 Unreachable");
     }else if(status == ReachableViaWWAN){
         
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"移动网络" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-        [alertView show];
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"移动网络" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+//        [alertView show];
         NSLog(@"Notification Says 移动网络 mobilenet");
         
     }else if(status == ReachableViaWiFi){
         
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"WIfi网络" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-        [alertView show];
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"WIfi网络" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+//        [alertView show];
         NSLog(@"Notification Says WIfi网络 wifinet");
     }
     
 }
+
+- (NetworkStatus)currentReachabilityStatus {
+    
+    AppDelegate *appDlg = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSParameterAssert([appDlg.reach isKindOfClass: [Reachability class]]);
+    NetworkStatus status = [appDlg.reach currentReachabilityStatus];
+    
+    return status;
+}
+
 
 - (void)dealloc {
     // 删除通知对象

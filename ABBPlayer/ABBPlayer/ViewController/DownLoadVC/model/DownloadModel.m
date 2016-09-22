@@ -7,11 +7,41 @@
 //
 
 #import "DownloadModel.h"
+@interface DownloadModel()<UIAlertViewDelegate>
+@property (nonatomic, strong) NSString *playUrl;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *defaultFormat;
+@end
 
 @implementation DownloadModel
 
 //defaultFormat 缺省下载格式：下载地址没有视频格式时设置
 - (void)downLoadWith:(NSString *)playUrl title:(NSString *)title defaultFormat:(NSString *)defaultFormat {
+    
+    self.playUrl = playUrl;
+    self.title = title;
+    self.defaultFormat = defaultFormat;
+    
+    NetworkStatus status = [ApplicationDelegate currentReachabilityStatus];
+    
+    if (status == NotReachable) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"当前网络不可用！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alertView show];
+        
+        return;
+    }else if(status == ReachableViaWWAN){
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"当前移动网络，是否下载？" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
+        alertView.tag = 1000;
+        [alertView show];
+        NSLog(@"----Notification Says mobilenet");
+    } else {
+        [self downLoad:self.playUrl title:self.title defaultFormat:self.defaultFormat];
+    
+    }
+}
+
+- (void)downLoad:(NSString *)playUrl title:(NSString *)title defaultFormat:(NSString *)defaultFormat {
+    
     
     NSString * suffix = [[WHC_HttpManager shared] fileFormatWithUrl:playUrl];
      NSString * titleSuffix = [[WHC_HttpManager shared] fileFormatWithUrl:title];
@@ -23,7 +53,6 @@
         fileName = [NSString stringWithFormat:@"%@%@",
                     title,
                     suffix != nil ? suffix : defaultFormat];
-    
     }
     
 #if WHC_BackgroundDownload
@@ -35,20 +64,21 @@ WHC_DownloadSessionTask * downloadTask = [[WHC_SessionDownloadManager shared]
       response:^(WHC_BaseOperation *operation, NSError *error, BOOL isOK) {
       } process:^(WHC_BaseOperation *operation, uint64_t recvLength, uint64_t totalLength, NSString *speed) {
           WHC_DownloadOperation * downloadOperation = (WHC_DownloadOperation*)operation;
+          
           if (![WHC_DownloadObject existLocalSavePath:downloadOperation.saveFileName]) {
-              WHC_DownloadObject * downloadObject = [WHC_DownloadObject new];
               [self toast:@"已经添加到下载队列"];
-                            
-              downloadObject.fileName = downloadOperation.saveFileName;
-              downloadObject.downloadPath = downloadOperation.strUrl;
-              downloadObject.downloadState = WHCDownloading;
-              downloadObject.currentDownloadLenght = downloadOperation.recvDataLenght;
-              downloadObject.totalLenght = downloadOperation.fileTotalLenght;
-              //                  downloadObject.hostID = indexPath.row;
-              [downloadObject writeDiskCache];
-              
-              
+             
           }
+          //写入当前数据
+          WHC_DownloadObject * downloadObject = [WHC_DownloadObject new];
+          
+          downloadObject.fileName = downloadOperation.saveFileName;
+          downloadObject.downloadPath = downloadOperation.strUrl;
+          downloadObject.downloadState = WHCDownloading;
+          downloadObject.currentDownloadLenght = downloadOperation.recvDataLenght;
+          downloadObject.totalLenght = downloadOperation.fileTotalLenght;
+          //                  downloadObject.hostID = indexPath.row;
+          [downloadObject writeDiskCache];
           NSLog(@"后台下载：recvLength = %llu , totalLength = %llu , speed = %@",recvLength , totalLength , speed);
       } didFinished:^(WHC_BaseOperation *operation, NSData *data, NSError *error, BOOL isSuccess) {
           if (isSuccess) {
@@ -182,4 +212,10 @@ downloadTask = [[WHC_HttpManager shared] download:playUrl
     }
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1 && alertView.tag == 1000) {
+        [self downLoad:self.playUrl title:self.title defaultFormat:self.defaultFormat];
+    }
+
+}
 @end

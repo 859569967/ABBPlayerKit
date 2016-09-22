@@ -76,6 +76,8 @@
     if (_downloadObject.downloadState != WHCDownloading) {
         [self removeDownloadAnimtion];
     }else {
+        [_downloadObject writeDiskCache]; //增加后台下载模式保存进度
+        
         [self startDownloadAnimation];
     }
     switch (_downloadObject.downloadState) {

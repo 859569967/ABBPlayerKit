@@ -12,7 +12,7 @@ playing and downloading
 
 ## 1、使用 [ZFPlayer](https://github.com/renzifeng/ZFPlayer) 播放视频（可以在线和本地播放）
 ## 2、使用[WHCNetWorkKit](https://github.com/netyouli/WHCNetWorkKit) 下载，后台下载
-
+## 3、使用CoreModel 存储下载列表信息数据（已添加库，待加功能，当前存储是用NSKeyedUnarchiver）
 
 # 设置
 

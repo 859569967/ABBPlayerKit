@@ -50,7 +50,13 @@ playing and downloading
 
         3、重新运行导致崩溃：
 ![LaunchServicesError](images/LaunchServicesError.png)
-        Clean然后在Build下重新运行。（资源文件加载方式变化导致编译的缓存数据中含有残留的无效数据。清空了错误数据重新编译）
+        解决办法：
+        第1种方法.点击当前的模拟器，点击IOS Simulator->Reset Content and Settings...->Reset，然后会重置模拟器，再编译代码可登录模拟器成功
+        第2种方法.点击Xcode->Product->Clean
+        第3种方法.将模拟器上的当前运行的app删除，再重新加载(长按模拟器的屏幕，点击当前报错的app 删除)
+        第4种方法.在info.plist文件中修改bundle的版本号
+        我遇到的问题是上述几种方法只能暂时解决，当我一修改代码时，又重新报错，然后我把我项目里的那个Resources(就是存储图片的那个包)给删除了，然后重新建分组，但是资源包的名字不叫Resources,然后重新clean,结果问题解决了，我想原因可能是我的Resources与Xcode里冲突了，然后Xcode不能打包app到模拟器上吧​
+        一般来说，手动删除了模拟器沙盒里面的文件夹，可能会出现这样的问题，最快捷有效的方法是重新设置模拟器，而不是重启模拟器。。。
 
 ##运行效果
 

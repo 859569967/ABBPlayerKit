@@ -30,6 +30,34 @@
     [super awakeFromNib];
     _downloadButton.clipsToBounds = true;
     [_downloadButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    
+    //注册通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:)name:ReachabilityChangedNotification object:nil];
+}
+
+#pragma mark - 通知方法:
+-(void)reachabilityChanged:(NSNotification *)notification{
+    
+    
+    
+    NetworkStatus status = (NetworkStatus)notification.object;
+    if (status == NotReachable) {
+        //网络已断开
+        if (_downloadObject.downloadState == WHCDownloading) {
+            [self removeDownloadAnimtion];
+            [self updateDownloadValue];
+            if (_delegate && [_delegate respondsToSelector:@selector(refreshTableViewCellUI)]) {
+                [_delegate refreshTableViewCellUI];
+            }
+        }
+    }else if(status == ReachableViaWWAN){
+        //[self.window toast:@"移动网络" postion:MIDDLE];
+        
+    }else if(status == ReachableViaWiFi){
+        //[self.window toast:@"WIfi网络" postion:MIDDLE];
+       
+    }
+    
 }
 
 - (void)addDownloadAnimation {

@@ -22,8 +22,7 @@
                                              selector:@selector(reachabilityChanged:)
                                                  name:kReachabilityChangedNotification
                                                object:nil];
-    
-    self.reach = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+     self.reach = [Reachability reachabilityWithHostName:@"www.baidu.com"];
     [self.reach startNotifier]; //开始监听，会启动一个run loop
     
     return YES;
@@ -35,26 +34,16 @@
     NSParameterAssert([reach isKindOfClass: [Reachability class]]);
     NetworkStatus status = [reach currentReachabilityStatus];
     
-    //    //用于检测是否是WIFI
-    //    NSLog(@"%d",([[Reachability reachabilityForLocalWiFi] currentReachabilityStatus] != NotReachable));
-    //    //用于检查是否是3G
-    //    NSLog(@"%d",([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] != NotReachable));
-    
     if (status == NotReachable) {
-//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"网络已断开" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-//        [alertView show];
-        NSLog(@"Notification Says 网络已断开 Unreachable");
-    }else if(status == ReachableViaWWAN){
+//        [self.window toastMid:@"网络已断开"];
+        [[NSNotificationCenter defaultCenter]postNotificationName:ReachabilityChangedNotification object:NotReachable];
         
-//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"移动网络" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-//        [alertView show];
-        NSLog(@"Notification Says 移动网络 mobilenet");
+    }else if(status == ReachableViaWWAN){
+//        [self.window toastMid:@"移动网络"];
         
     }else if(status == ReachableViaWiFi){
-        
-//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"WIfi网络" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-//        [alertView show];
-        NSLog(@"Notification Says WIfi网络 wifinet");
+//        [self.window toastMid:@"WIfi网络"];
+//        NSLog(@"Notification Says WIfi网络 wifinet");
     }
     
 }

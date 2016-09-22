@@ -21,6 +21,7 @@ typedef enum {
 
 @interface UIView (WHC_Toast)
 - (void)toast:(NSString *)msg;
+- (void)toastMid:(NSString *)msg;
 - (void)toast:(NSString *)msg postion:(WHC_TOAST_POSTION)postion;
 - (void)toast:(NSString *)msg type:(WHC_TOAST_TYPE)type;
 - (void)toast:(NSString *)msg postion:(WHC_TOAST_POSTION)postion type:(WHC_TOAST_TYPE)type;

@@ -70,6 +70,10 @@
     [self playMp4:playUrl fileName:downloadObject.fileName];
 }
 
+- (void)refreshTableViewCellUI {
+    [self.tableView reloadData];
+}
+
 -(void) playMp4:(NSString*)url fileName:(NSString*)fileName{
     //播放器
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

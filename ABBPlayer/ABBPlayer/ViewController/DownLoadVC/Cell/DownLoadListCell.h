@@ -23,6 +23,7 @@
 - (void)videoDownload:(NSError *)error index:(NSInteger)index strUrl:(NSString *)strUrl;
 - (void)updateDownloadValue:(WHC_DownloadObject *)downloadObject index:(NSInteger)index;
 - (void)videoPlayerIndex:(NSInteger)index;
+- (void)refreshTableViewCellUI;
 
 @end
 

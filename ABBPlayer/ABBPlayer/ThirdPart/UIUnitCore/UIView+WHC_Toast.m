@@ -22,6 +22,10 @@
     [self toast:msg during:KWHC_DURING];
 }
 
+- (void)toastMid:(NSString *)msg{
+    [self toastMid:msg during:KWHC_DURING];
+}
+
 - (void)toast:(NSString *)msg postion:(WHC_TOAST_POSTION)postion{
     [self toast:msg during:KWHC_DURING postion:postion];
 }
@@ -36,6 +40,10 @@
 
 - (void)toast:(NSString *)msg during:(NSTimeInterval)during{
     [self toast:msg during:KWHC_DURING postion:BOTTOM];
+}
+
+- (void)toastMid:(NSString *)msg during:(NSTimeInterval)during{
+    [self toast:msg during:KWHC_DURING postion:MIDDLE];
 }
 
 - (void)toast:(NSString *)msg during:(NSTimeInterval)during postion:(WHC_TOAST_POSTION)postion{

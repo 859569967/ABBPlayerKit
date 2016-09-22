@@ -159,6 +159,11 @@ const static double k1MB = 1024 * 1024;
     return [NSString stringWithFormat:@"%@/%@",self.totalLenghtToString , self.currentDownloadLenghtToString];
 }
 
+- (NSString *)percentageLabelText {
+    return [NSString stringWithFormat:@"%.1f%%",([self.currentDownloadLenghtToString floatValue] / [self.totalLenghtToString floatValue] ) * 100];
+    
+}
+
 - (void)createCacheDirectory:(NSString *)path {
     NSFileManager * fm = [NSFileManager defaultManager];
     BOOL isDirectory = YES;

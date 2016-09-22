@@ -95,18 +95,11 @@
     }
 }
 
-- (NSString *)percentageLabelText {
-    if (_downloadObject.totalLenght > 0) {
-        return [NSString stringWithFormat:@"%.2llu%%",_downloadObject.currentDownloadLenght / _downloadObject.totalLenght];
-    }
-    return @"0%";
-}
-
 - (void)updateDownloadValue {
     _titleLabel.text = _downloadObject.fileName;
     _progressBar.progress = _downloadObject.downloadProcessValue;
     _downloadValueLabel.text = _downloadObject.downloadProcessText;
-    self.percentageLabel.text = [self percentageLabelText];
+    _percentageLabel.text = _downloadObject.percentageLabelText;
     
     NSString * strSpeed = _downloadObject.downloadSpeed;
     if (_downloadObject.downloadState != WHCDownloading) {

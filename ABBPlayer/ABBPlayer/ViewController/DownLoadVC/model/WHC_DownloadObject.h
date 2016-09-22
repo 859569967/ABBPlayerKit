@@ -29,6 +29,7 @@ typedef NS_OPTIONS(NSUInteger, WHCDownloadState) {
 @property (nonatomic , copy , readonly)NSString * currentDownloadLenghtToString;
 @property (nonatomic , copy , readonly)NSString * totalLenghtToString;
 @property (nonatomic , copy , readonly)NSString * downloadProcessText;
+@property (nonatomic , copy , readonly)NSString *percentageLabelText;
 @property (nonatomic , copy) NSString * etag;
 
 + (NSString *)cacheDirectory;

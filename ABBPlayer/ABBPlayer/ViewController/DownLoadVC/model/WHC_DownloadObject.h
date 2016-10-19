@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CoreModel.h"
+
 
 typedef NS_OPTIONS(NSUInteger, WHCDownloadState) {
     WHCNone = 1 << 0,

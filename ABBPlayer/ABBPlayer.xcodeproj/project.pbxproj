@@ -26,35 +26,6 @@
 		F5A6373E1D91311300F23028 /* ZFPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637361D91311300F23028 /* ZFPlayerModel.m */; };
 		F5A6373F1D91311300F23028 /* ZFPlyerResolution.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637381D91311300F23028 /* ZFPlyerResolution.m */; };
 		F5A637401D91311300F23028 /* ZFPlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A6373B1D91311300F23028 /* ZFPlayerCell.m */; };
-		F5A637971D9136BD00F23028 /* CommonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637451D9136BC00F23028 /* CommonVC.m */; };
-		F5A637981D9136BD00F23028 /* CoreSVP.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637481D9136BC00F23028 /* CoreSVP.m */; };
-		F5A637991D9136BD00F23028 /* SVP.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5A6374A1D9136BC00F23028 /* SVP.bundle */; };
-		F5A6379A1D9136BD00F23028 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A6374D1D9136BC00F23028 /* SVIndefiniteAnimatedView.m */; };
-		F5A6379B1D9136BD00F23028 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5A6374F1D9136BC00F23028 /* SVProgressHUD.bundle */; };
-		F5A6379C1D9136BD00F23028 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637511D9136BC00F23028 /* SVProgressHUD.m */; };
-		F5A6379D1D9136BD00F23028 /* CoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637541D9136BC00F23028 /* CoreModel.m */; };
-		F5A6379E1D9136BD00F23028 /* NSArray+CoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637591D9136BC00F23028 /* NSArray+CoreModel.m */; };
-		F5A6379F1D9136BD00F23028 /* NSDictionary+Sqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A6375C1D9136BC00F23028 /* NSDictionary+Sqlite.m */; };
-		F5A637A01D9136BD00F23028 /* CoreModel+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A6375F1D9136BC00F23028 /* CoreModel+Cache.m */; };
-		F5A637A11D9136BD00F23028 /* NSObject+CoreModelCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637611D9136BC00F23028 /* NSObject+CoreModelCommon.m */; };
-		F5A637A21D9136BD00F23028 /* NSObject+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637631D9136BC00F23028 /* NSObject+Create.m */; };
-		F5A637A31D9136BD00F23028 /* NSObject+Delete.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637651D9136BC00F23028 /* NSObject+Delete.m */; };
-		F5A637A41D9136BD00F23028 /* NSObject+Insert.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637671D9136BC00F23028 /* NSObject+Insert.m */; };
-		F5A637A51D9136BD00F23028 /* NSObject+Save.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637691D9136BC00F23028 /* NSObject+Save.m */; };
-		F5A637A61D9136BD00F23028 /* NSObject+Select.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A6376B1D9136BC00F23028 /* NSObject+Select.m */; };
-		F5A637A71D9136BD00F23028 /* NSObject+Update.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A6376D1D9136BC00F23028 /* NSObject+Update.m */; };
-		F5A637A81D9136BD00F23028 /* NSOperationQueue+Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637701D9136BC00F23028 /* NSOperationQueue+Queue.m */; };
-		F5A637A91D9136BD00F23028 /* NSString+Stackoverflow.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637731D9136BC00F23028 /* NSString+Stackoverflow.m */; };
-		F5A637AA1D9136BD00F23028 /* CoreModelConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637761D9136BC00F23028 /* CoreModelConst.m */; };
-		F5A637AB1D9136BD00F23028 /* CoreProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A6377C1D9136BC00F23028 /* CoreProperty.m */; };
-		F5A637AC1D9136BD00F23028 /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A6377E1D9136BC00F23028 /* NSObject+Runtime.m */; };
-		F5A637AD1D9136BD00F23028 /* CoreFMDB.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637841D9136BC00F23028 /* CoreFMDB.m */; };
-		F5A637AE1D9136BD00F23028 /* NSString+CoreFMDB.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637881D9136BC00F23028 /* NSString+CoreFMDB.m */; };
-		F5A637AF1D9136BD00F23028 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A6378B1D9136BD00F23028 /* FMDatabase.m */; };
-		F5A637B01D9136BD00F23028 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A6378D1D9136BD00F23028 /* FMDatabaseAdditions.m */; };
-		F5A637B11D9136BD00F23028 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A6378F1D9136BD00F23028 /* FMDatabasePool.m */; };
-		F5A637B21D9136BD00F23028 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637911D9136BD00F23028 /* FMDatabaseQueue.m */; };
-		F5A637B31D9136BD00F23028 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637941D9136BD00F23028 /* FMResultSet.m */; };
 		F5A637C11D9136C400F23028 /* DownLoadListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637B71D9136C400F23028 /* DownLoadListCell.m */; };
 		F5A637C21D9136C400F23028 /* DownLoadListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A637B81D9136C400F23028 /* DownLoadListCell.xib */; };
 		F5A637C31D9136C400F23028 /* WHC_DownloadObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A637BB1D9136C400F23028 /* WHC_DownloadObject.m */; };
@@ -130,68 +101,6 @@
 		F5A637381D91311300F23028 /* ZFPlyerResolution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPlyerResolution.m; sourceTree = "<group>"; };
 		F5A6373A1D91311300F23028 /* ZFPlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPlayerCell.h; sourceTree = "<group>"; };
 		F5A6373B1D91311300F23028 /* ZFPlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPlayerCell.m; sourceTree = "<group>"; };
-		F5A637441D9136BC00F23028 /* CommonVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonVC.h; sourceTree = "<group>"; };
-		F5A637451D9136BC00F23028 /* CommonVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonVC.m; sourceTree = "<group>"; };
-		F5A637471D9136BC00F23028 /* CoreSVP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreSVP.h; sourceTree = "<group>"; };
-		F5A637481D9136BC00F23028 /* CoreSVP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreSVP.m; sourceTree = "<group>"; };
-		F5A6374A1D9136BC00F23028 /* SVP.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVP.bundle; sourceTree = "<group>"; };
-		F5A6374C1D9136BC00F23028 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
-		F5A6374D1D9136BC00F23028 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
-		F5A6374E1D9136BC00F23028 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
-		F5A6374F1D9136BC00F23028 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
-		F5A637501D9136BC00F23028 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
-		F5A637511D9136BC00F23028 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
-		F5A637531D9136BC00F23028 /* CoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreModel.h; sourceTree = "<group>"; };
-		F5A637541D9136BC00F23028 /* CoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreModel.m; sourceTree = "<group>"; };
-		F5A637581D9136BC00F23028 /* NSArray+CoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CoreModel.h"; sourceTree = "<group>"; };
-		F5A637591D9136BC00F23028 /* NSArray+CoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CoreModel.m"; sourceTree = "<group>"; };
-		F5A6375B1D9136BC00F23028 /* NSDictionary+Sqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Sqlite.h"; sourceTree = "<group>"; };
-		F5A6375C1D9136BC00F23028 /* NSDictionary+Sqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Sqlite.m"; sourceTree = "<group>"; };
-		F5A6375E1D9136BC00F23028 /* CoreModel+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreModel+Cache.h"; sourceTree = "<group>"; };
-		F5A6375F1D9136BC00F23028 /* CoreModel+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreModel+Cache.m"; sourceTree = "<group>"; };
-		F5A637601D9136BC00F23028 /* NSObject+CoreModelCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CoreModelCommon.h"; sourceTree = "<group>"; };
-		F5A637611D9136BC00F23028 /* NSObject+CoreModelCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CoreModelCommon.m"; sourceTree = "<group>"; };
-		F5A637621D9136BC00F23028 /* NSObject+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Create.h"; sourceTree = "<group>"; };
-		F5A637631D9136BC00F23028 /* NSObject+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Create.m"; sourceTree = "<group>"; };
-		F5A637641D9136BC00F23028 /* NSObject+Delete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Delete.h"; sourceTree = "<group>"; };
-		F5A637651D9136BC00F23028 /* NSObject+Delete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Delete.m"; sourceTree = "<group>"; };
-		F5A637661D9136BC00F23028 /* NSObject+Insert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Insert.h"; sourceTree = "<group>"; };
-		F5A637671D9136BC00F23028 /* NSObject+Insert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Insert.m"; sourceTree = "<group>"; };
-		F5A637681D9136BC00F23028 /* NSObject+Save.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Save.h"; sourceTree = "<group>"; };
-		F5A637691D9136BC00F23028 /* NSObject+Save.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Save.m"; sourceTree = "<group>"; };
-		F5A6376A1D9136BC00F23028 /* NSObject+Select.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Select.h"; sourceTree = "<group>"; };
-		F5A6376B1D9136BC00F23028 /* NSObject+Select.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Select.m"; sourceTree = "<group>"; };
-		F5A6376C1D9136BC00F23028 /* NSObject+Update.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Update.h"; sourceTree = "<group>"; };
-		F5A6376D1D9136BC00F23028 /* NSObject+Update.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Update.m"; sourceTree = "<group>"; };
-		F5A6376F1D9136BC00F23028 /* NSOperationQueue+Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+Queue.h"; sourceTree = "<group>"; };
-		F5A637701D9136BC00F23028 /* NSOperationQueue+Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOperationQueue+Queue.m"; sourceTree = "<group>"; };
-		F5A637721D9136BC00F23028 /* NSString+Stackoverflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Stackoverflow.h"; sourceTree = "<group>"; };
-		F5A637731D9136BC00F23028 /* NSString+Stackoverflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Stackoverflow.m"; sourceTree = "<group>"; };
-		F5A637751D9136BC00F23028 /* CoreModelConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreModelConst.h; sourceTree = "<group>"; };
-		F5A637761D9136BC00F23028 /* CoreModelConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreModelConst.m; sourceTree = "<group>"; };
-		F5A637781D9136BC00F23028 /* CoreModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreModelProtocol.h; sourceTree = "<group>"; };
-		F5A637791D9136BC00F23028 /* CorePageModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePageModelProtocol.h; sourceTree = "<group>"; };
-		F5A6377B1D9136BC00F23028 /* CoreProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreProperty.h; sourceTree = "<group>"; };
-		F5A6377C1D9136BC00F23028 /* CoreProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreProperty.m; sourceTree = "<group>"; };
-		F5A6377D1D9136BC00F23028 /* NSObject+Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Runtime.h"; sourceTree = "<group>"; };
-		F5A6377E1D9136BC00F23028 /* NSObject+Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Runtime.m"; sourceTree = "<group>"; };
-		F5A637801D9136BC00F23028 /* CoreModelType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreModelType.h; sourceTree = "<group>"; };
-		F5A637831D9136BC00F23028 /* CoreFMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreFMDB.h; sourceTree = "<group>"; };
-		F5A637841D9136BC00F23028 /* CoreFMDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreFMDB.m; sourceTree = "<group>"; };
-		F5A637871D9136BC00F23028 /* NSString+CoreFMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CoreFMDB.h"; sourceTree = "<group>"; };
-		F5A637881D9136BC00F23028 /* NSString+CoreFMDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CoreFMDB.m"; sourceTree = "<group>"; };
-		F5A6378A1D9136BD00F23028 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		F5A6378B1D9136BD00F23028 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		F5A6378C1D9136BD00F23028 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		F5A6378D1D9136BD00F23028 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		F5A6378E1D9136BD00F23028 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		F5A6378F1D9136BD00F23028 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		F5A637901D9136BD00F23028 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		F5A637911D9136BD00F23028 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		F5A637921D9136BD00F23028 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		F5A637931D9136BD00F23028 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		F5A637941D9136BD00F23028 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		F5A637961D9136BD00F23028 /* CoreFMDBSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreFMDBSingleton.h; sourceTree = "<group>"; };
 		F5A637B61D9136C400F23028 /* DownLoadListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadListCell.h; sourceTree = "<group>"; };
 		F5A637B71D9136C400F23028 /* DownLoadListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadListCell.m; sourceTree = "<group>"; };
 		F5A637B81D9136C400F23028 /* DownLoadListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownLoadListCell.xib; sourceTree = "<group>"; };
@@ -349,7 +258,6 @@
 			isa = PBXGroup;
 			children = (
 				F5A637C61D9137B300F23028 /* UIUnitCore */,
-				F5A637411D9136BC00F23028 /* CoreModel-lib */,
 				F540E4DF1D912A4200D26CBF /* ZFPlayer */,
 			);
 			path = ThirdPart;
@@ -422,259 +330,6 @@
 				F5A6373B1D91311300F23028 /* ZFPlayerCell.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		F5A637411D9136BC00F23028 /* CoreModel-lib */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637421D9136BC00F23028 /* CommonVC */,
-				F5A637521D9136BC00F23028 /* CoreModel */,
-				F5A637811D9136BC00F23028 /* FrameWorks */,
-			);
-			path = "CoreModel-lib";
-			sourceTree = "<group>";
-		};
-		F5A637421D9136BC00F23028 /* CommonVC */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637431D9136BC00F23028 /* Common */,
-			);
-			path = CommonVC;
-			sourceTree = "<group>";
-		};
-		F5A637431D9136BC00F23028 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637441D9136BC00F23028 /* CommonVC.h */,
-				F5A637451D9136BC00F23028 /* CommonVC.m */,
-				F5A637461D9136BC00F23028 /* CoreSVP */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		F5A637461D9136BC00F23028 /* CoreSVP */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637471D9136BC00F23028 /* CoreSVP.h */,
-				F5A637481D9136BC00F23028 /* CoreSVP.m */,
-				F5A637491D9136BC00F23028 /* Lib */,
-			);
-			path = CoreSVP;
-			sourceTree = "<group>";
-		};
-		F5A637491D9136BC00F23028 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				F5A6374A1D9136BC00F23028 /* SVP.bundle */,
-				F5A6374B1D9136BC00F23028 /* SVProgressHUD */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		F5A6374B1D9136BC00F23028 /* SVProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				F5A6374C1D9136BC00F23028 /* SVIndefiniteAnimatedView.h */,
-				F5A6374D1D9136BC00F23028 /* SVIndefiniteAnimatedView.m */,
-				F5A6374E1D9136BC00F23028 /* SVProgressHUD-Prefix.pch */,
-				F5A6374F1D9136BC00F23028 /* SVProgressHUD.bundle */,
-				F5A637501D9136BC00F23028 /* SVProgressHUD.h */,
-				F5A637511D9136BC00F23028 /* SVProgressHUD.m */,
-			);
-			path = SVProgressHUD;
-			sourceTree = "<group>";
-		};
-		F5A637521D9136BC00F23028 /* CoreModel */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637531D9136BC00F23028 /* CoreModel.h */,
-				F5A637541D9136BC00F23028 /* CoreModel.m */,
-				F5A637551D9136BC00F23028 /* Lib */,
-			);
-			path = CoreModel;
-			sourceTree = "<group>";
-		};
-		F5A637551D9136BC00F23028 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637561D9136BC00F23028 /* Category */,
-				F5A637741D9136BC00F23028 /* CoreMoelConst */,
-				F5A637771D9136BC00F23028 /* Protocol */,
-				F5A6377A1D9136BC00F23028 /* Reflect */,
-				F5A6377F1D9136BC00F23028 /* Type */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		F5A637561D9136BC00F23028 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637571D9136BC00F23028 /* NSArray */,
-				F5A6375A1D9136BC00F23028 /* NSDictionary */,
-				F5A6375D1D9136BC00F23028 /* NSObject */,
-				F5A6376E1D9136BC00F23028 /* NSOperationQueue */,
-				F5A637711D9136BC00F23028 /* NSString */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		F5A637571D9136BC00F23028 /* NSArray */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637581D9136BC00F23028 /* NSArray+CoreModel.h */,
-				F5A637591D9136BC00F23028 /* NSArray+CoreModel.m */,
-			);
-			path = NSArray;
-			sourceTree = "<group>";
-		};
-		F5A6375A1D9136BC00F23028 /* NSDictionary */ = {
-			isa = PBXGroup;
-			children = (
-				F5A6375B1D9136BC00F23028 /* NSDictionary+Sqlite.h */,
-				F5A6375C1D9136BC00F23028 /* NSDictionary+Sqlite.m */,
-			);
-			path = NSDictionary;
-			sourceTree = "<group>";
-		};
-		F5A6375D1D9136BC00F23028 /* NSObject */ = {
-			isa = PBXGroup;
-			children = (
-				F5A6375E1D9136BC00F23028 /* CoreModel+Cache.h */,
-				F5A6375F1D9136BC00F23028 /* CoreModel+Cache.m */,
-				F5A637601D9136BC00F23028 /* NSObject+CoreModelCommon.h */,
-				F5A637611D9136BC00F23028 /* NSObject+CoreModelCommon.m */,
-				F5A637621D9136BC00F23028 /* NSObject+Create.h */,
-				F5A637631D9136BC00F23028 /* NSObject+Create.m */,
-				F5A637641D9136BC00F23028 /* NSObject+Delete.h */,
-				F5A637651D9136BC00F23028 /* NSObject+Delete.m */,
-				F5A637661D9136BC00F23028 /* NSObject+Insert.h */,
-				F5A637671D9136BC00F23028 /* NSObject+Insert.m */,
-				F5A637681D9136BC00F23028 /* NSObject+Save.h */,
-				F5A637691D9136BC00F23028 /* NSObject+Save.m */,
-				F5A6376A1D9136BC00F23028 /* NSObject+Select.h */,
-				F5A6376B1D9136BC00F23028 /* NSObject+Select.m */,
-				F5A6376C1D9136BC00F23028 /* NSObject+Update.h */,
-				F5A6376D1D9136BC00F23028 /* NSObject+Update.m */,
-			);
-			path = NSObject;
-			sourceTree = "<group>";
-		};
-		F5A6376E1D9136BC00F23028 /* NSOperationQueue */ = {
-			isa = PBXGroup;
-			children = (
-				F5A6376F1D9136BC00F23028 /* NSOperationQueue+Queue.h */,
-				F5A637701D9136BC00F23028 /* NSOperationQueue+Queue.m */,
-			);
-			path = NSOperationQueue;
-			sourceTree = "<group>";
-		};
-		F5A637711D9136BC00F23028 /* NSString */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637721D9136BC00F23028 /* NSString+Stackoverflow.h */,
-				F5A637731D9136BC00F23028 /* NSString+Stackoverflow.m */,
-			);
-			path = NSString;
-			sourceTree = "<group>";
-		};
-		F5A637741D9136BC00F23028 /* CoreMoelConst */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637751D9136BC00F23028 /* CoreModelConst.h */,
-				F5A637761D9136BC00F23028 /* CoreModelConst.m */,
-			);
-			path = CoreMoelConst;
-			sourceTree = "<group>";
-		};
-		F5A637771D9136BC00F23028 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637781D9136BC00F23028 /* CoreModelProtocol.h */,
-				F5A637791D9136BC00F23028 /* CorePageModelProtocol.h */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		F5A6377A1D9136BC00F23028 /* Reflect */ = {
-			isa = PBXGroup;
-			children = (
-				F5A6377B1D9136BC00F23028 /* CoreProperty.h */,
-				F5A6377C1D9136BC00F23028 /* CoreProperty.m */,
-				F5A6377D1D9136BC00F23028 /* NSObject+Runtime.h */,
-				F5A6377E1D9136BC00F23028 /* NSObject+Runtime.m */,
-			);
-			path = Reflect;
-			sourceTree = "<group>";
-		};
-		F5A6377F1D9136BC00F23028 /* Type */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637801D9136BC00F23028 /* CoreModelType.h */,
-			);
-			path = Type;
-			sourceTree = "<group>";
-		};
-		F5A637811D9136BC00F23028 /* FrameWorks */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637821D9136BC00F23028 /* CoreFMDB */,
-			);
-			path = FrameWorks;
-			sourceTree = "<group>";
-		};
-		F5A637821D9136BC00F23028 /* CoreFMDB */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637831D9136BC00F23028 /* CoreFMDB.h */,
-				F5A637841D9136BC00F23028 /* CoreFMDB.m */,
-				F5A637851D9136BC00F23028 /* Lib */,
-			);
-			path = CoreFMDB;
-			sourceTree = "<group>";
-		};
-		F5A637851D9136BC00F23028 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637861D9136BC00F23028 /* Category */,
-				F5A637891D9136BD00F23028 /* fmdb */,
-				F5A637951D9136BD00F23028 /* Singleton */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		F5A637861D9136BC00F23028 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637871D9136BC00F23028 /* NSString+CoreFMDB.h */,
-				F5A637881D9136BC00F23028 /* NSString+CoreFMDB.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		F5A637891D9136BD00F23028 /* fmdb */ = {
-			isa = PBXGroup;
-			children = (
-				F5A6378A1D9136BD00F23028 /* FMDatabase.h */,
-				F5A6378B1D9136BD00F23028 /* FMDatabase.m */,
-				F5A6378C1D9136BD00F23028 /* FMDatabaseAdditions.h */,
-				F5A6378D1D9136BD00F23028 /* FMDatabaseAdditions.m */,
-				F5A6378E1D9136BD00F23028 /* FMDatabasePool.h */,
-				F5A6378F1D9136BD00F23028 /* FMDatabasePool.m */,
-				F5A637901D9136BD00F23028 /* FMDatabaseQueue.h */,
-				F5A637911D9136BD00F23028 /* FMDatabaseQueue.m */,
-				F5A637921D9136BD00F23028 /* FMDB.h */,
-				F5A637931D9136BD00F23028 /* FMResultSet.h */,
-				F5A637941D9136BD00F23028 /* FMResultSet.m */,
-			);
-			path = fmdb;
-			sourceTree = "<group>";
-		};
-		F5A637951D9136BD00F23028 /* Singleton */ = {
-			isa = PBXGroup;
-			children = (
-				F5A637961D9136BD00F23028 /* CoreFMDBSingleton.h */,
-			);
-			path = Singleton;
 			sourceTree = "<group>";
 		};
 		F5A637B41D9136C400F23028 /* DownLoadVC */ = {
@@ -856,10 +511,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5A6379B1D9136BD00F23028 /* SVProgressHUD.bundle in Resources */,
 				F5A637C21D9136C400F23028 /* DownLoadListCell.xib in Resources */,
 				F540E4EF1D912A4200D26CBF /* ZFPlayer.bundle in Resources */,
-				F5A637991D9136BD00F23028 /* SVP.bundle in Resources */,
 				F540E4B71D9126D100D26CBF /* LaunchScreen.storyboard in Resources */,
 				F540E4B41D9126D100D26CBF /* Assets.xcassets in Resources */,
 				F5A6373D1D91311300F23028 /* videoData.json in Resources */,
@@ -936,55 +589,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5A637A71D9136BD00F23028 /* NSObject+Update.m in Sources */,
-				F5A6379D1D9136BD00F23028 /* CoreModel.m in Sources */,
 				F5A637CF1D9137B300F23028 /* UIScrollView+WHC_PullRefresh.m in Sources */,
 				F540E4F01D912A4200D26CBF /* ZFPlayerControlView.m in Sources */,
 				F540E4EC1D912A4200D26CBF /* ASValuePopUpView.m in Sources */,
-				F5A6379C1D9136BD00F23028 /* SVProgressHUD.m in Sources */,
-				F5A637A51D9136BD00F23028 /* NSObject+Save.m in Sources */,
-				F5A637A81D9136BD00F23028 /* NSOperationQueue+Queue.m in Sources */,
-				F5A637AD1D9136BD00F23028 /* CoreFMDB.m in Sources */,
-				F5A6379F1D9136BD00F23028 /* NSDictionary+Sqlite.m in Sources */,
-				F5A637981D9136BD00F23028 /* CoreSVP.m in Sources */,
-				F5A637A31D9136BD00F23028 /* NSObject+Delete.m in Sources */,
-				F5A637A01D9136BD00F23028 /* CoreModel+Cache.m in Sources */,
 				F5A637D11D9137B300F23028 /* UIView+WHC_Toast.m in Sources */,
 				F5A637C51D9136C400F23028 /* TableBaseViewController.m in Sources */,
-				F5A637B21D9136BD00F23028 /* FMDatabaseQueue.m in Sources */,
-				F5A637A61D9136BD00F23028 /* NSObject+Select.m in Sources */,
-				F5A637B11D9136BD00F23028 /* FMDatabasePool.m in Sources */,
-				F5A637A91D9136BD00F23028 /* NSString+Stackoverflow.m in Sources */,
 				F5A637D01D9137B300F23028 /* UIView+WHC_Loading.m in Sources */,
 				F540E4AC1D9126D100D26CBF /* AppDelegate.m in Sources */,
 				F540E4A91D9126D100D26CBF /* main.m in Sources */,
 				F5A637E01D92243700F23028 /* MessageBaseViewController.m in Sources */,
-				F5A6379A1D9136BD00F23028 /* SVIndefiniteAnimatedView.m in Sources */,
 				F5A637C11D9136C400F23028 /* DownLoadListCell.m in Sources */,
-				F5A637AA1D9136BD00F23028 /* CoreModelConst.m in Sources */,
 				F540E4F11D912A4200D26CBF /* ZFPlayerView.m in Sources */,
-				F5A637B01D9136BD00F23028 /* FMDatabaseAdditions.m in Sources */,
 				F5A637C31D9136C400F23028 /* WHC_DownloadObject.m in Sources */,
 				F540E4EE1D912A4200D26CBF /* ZFBrightnessView.m in Sources */,
 				F5A6373F1D91311300F23028 /* ZFPlyerResolution.m in Sources */,
-				F5A637B31D9136BD00F23028 /* FMResultSet.m in Sources */,
-				F5A637AF1D9136BD00F23028 /* FMDatabase.m in Sources */,
-				F5A637A41D9136BD00F23028 /* NSObject+Insert.m in Sources */,
 				F5A637C41D9136C400F23028 /* DownLoadListViewController.m in Sources */,
-				F5A637AC1D9136BD00F23028 /* NSObject+Runtime.m in Sources */,
 				F5A637DB1D91410A00F23028 /* DownloadModel.m in Sources */,
 				F5A637401D91311300F23028 /* ZFPlayerCell.m in Sources */,
 				F5A6373C1D91311300F23028 /* VideoListViewController.m in Sources */,
 				F5A637D61D91389500F23028 /* MoviePlayerViewController.m in Sources */,
-				F5A637A11D9136BD00F23028 /* NSObject+CoreModelCommon.m in Sources */,
 				F5A6373E1D91311300F23028 /* ZFPlayerModel.m in Sources */,
 				F540E4ED1D912A4200D26CBF /* ASValueTrackingSlider.m in Sources */,
-				F5A637971D9136BD00F23028 /* CommonVC.m in Sources */,
 				F5A637D21D9137B300F23028 /* UIView+WHC_ViewProperty.m in Sources */,
-				F5A637A21D9136BD00F23028 /* NSObject+Create.m in Sources */,
-				F5A637AE1D9136BD00F23028 /* NSString+CoreFMDB.m in Sources */,
-				F5A6379E1D9136BD00F23028 /* NSArray+CoreModel.m in Sources */,
-				F5A637AB1D9136BD00F23028 /* CoreProperty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
